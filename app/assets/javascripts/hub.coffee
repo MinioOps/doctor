@@ -6,8 +6,9 @@
 # Syntax Highlighting
 #-----------------------
 $(document).on 'ready page:load', ->
-  $('pre code').each (i, block) ->
-    hljs.highlightBlock block
+  $('pre code:not(.sh)').each (i, block) ->
+    if $(this).attr('class')[0]
+      hljs.highlightBlock block
     return
   return
 
