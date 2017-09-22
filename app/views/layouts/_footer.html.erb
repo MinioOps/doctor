@@ -10,5 +10,10 @@
         Doctor is licensed under Apache 2.0 License.
 	<% end %>
 
-    <%= (link_to "Talk to community", @mybrand.footer_chatlink, :target => "_blank", :class => "footer__chatlink") if !@mybrand.footer_chatlink.blank? %>
+    <% if !@mybrand.footer_chatlink.blank? %>
+        <a href="<%= @mybrand.footer_chatlink %>" target="_blank" class="footer__chatlink">
+            <img src="assets/icons/slack.svg" alt="">
+            <span>Join us on Slack</span>
+        </a>
+    <% end %>
 </footer>

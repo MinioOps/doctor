@@ -83,6 +83,7 @@ $grey: #9E9E9E;
 $blue-gray: #607D8B;
 $dark: #252b2f;
 $black: #000;
+$minio-highlight: #f4aa90;
 
 
 /*--------------------
@@ -106,14 +107,14 @@ $th-color: darken($text-color, 10%);
 /*--------------------
   Button
 --------------------*/
-$button-default-border-color: #efefef;
 $button-default-bg: #fff;
+$button-default-border-color: #efefef;
 $button-blue-bg: #42A5F5;
-$button-blue-border-color: #42A5F5;
+$button-blue-border-color: $button-blue-bg;
 $button-red-bg: #EF5350;
-$button-red-border-color: #EF5350;
+$button-red-border-color: $button-red-bg;
 $button-green-bg: #4CAF50;
-$button-green-border-color: #4CAF50;
+$button-green-border-color: $button-green-bg;
 
 
 /*--------------------

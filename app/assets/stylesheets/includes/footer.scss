@@ -29,19 +29,37 @@
 
 .footer__chatlink {
   position: fixed;
-  right: 30px;
   bottom: 0;
-  background-color: $light-blue;
-  color: $white;
-  padding: 10px 20px;
-  border-radius: 3px 3px 0 0;
-  @include transition(all, 300ms);
   z-index: 10;
-  box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.12);
+  right: 30px;
+  background-color: $minio-highlight;
+  color: $white;
+  padding: 13px 18px 10px;
+  border-radius: 2px 2px 0 0;
+  @include transition(all, 300ms);
+
+  & > img {
+    height: 25px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+  & > span {
+    padding-left: 3px;
+  }
 
   &:hover,
   &:focus {
     color: $white;
-    background-color: darken($light-blue, 5%);
+    background-color: darken($minio-highlight, 5%);
+  }
+
+  @media(max-width: $screen-xs-max) {
+    right: 0;
+
+    & > span {
+      display: none;
+    }
   }
 }
